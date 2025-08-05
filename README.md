@@ -1,14 +1,32 @@
-# PredictPesa
-### Africa's On-Chain Prediction Market for Bitcoin & Local Insight
+# 🌍 PredictPesa
+### Africa's Premier DeFi-Native, Bitcoin-Powered Prediction Market Platform
 
 [![Hedera](https://img.shields.io/badge/Built%20on-Hedera-40E0D0?style=for-the-badge&logo=hedera&logoColor=white)](https://hedera.com)
 [![Bitcoin](https://img.shields.io/badge/Powered%20by-Bitcoin-F7931A?style=for-the-badge&logo=bitcoin&logoColor=white)](https://bitcoin.org)
+[![Python](https://img.shields.io/badge/Backend-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 
 > **"Stake Bitcoin. Forecast Everything. Trade Your Belief."**
 
-PredictPesa is a DeFi-native, AI-powered prediction market protocol built on Hedera that transforms predictions into tradeable financial primitives. Users across Africa and globally can stake Bitcoin to forecast real-world outcomes—elections, FX rates, sports, food prices, rainfall, and more—while earning yield-bearing position tokens that integrate seamlessly with the broader DeFi ecosystem.
+PredictPesa is a revolutionary DeFi-native, AI-powered prediction market protocol built on Hedera that transforms predictions into tradeable financial primitives. Users across Africa and globally can stake Bitcoin to forecast real-world outcomes—elections, FX rates, sports, food prices, rainfall, and more—while earning yield-bearing position tokens that integrate seamlessly with the broader DeFi ecosystem.
+
+---
+
+## 📋 Table of Contents
+
+- [Problem Statement](#-problem-statement)
+- [Solution Overview](#-solution-overview)
+- [Technical Architecture](#-technical-architecture)
+- [Project Structure](#-project-structure)
+- [Backend](#-backend)
+- [Frontend](#-frontend)
+- [Getting Started](#-getting-started)
+- [API Endpoints](#-api-endpoints)
+- [Testing](#-testing)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
@@ -98,282 +116,238 @@ PredictPesa creates the world's first **Bitcoin-native prediction market protoco
 **Market Suggestion Engine**
 - NLP processing of news feeds and social media
 - Trending topic identification and scoring
-- Local relevance weighting for African markets
+- Local relevance filtering and categorization
 
-**Price Discovery AI**
-- Optimal market maker pricing algorithms
-- Volatility prediction and risk assessment
-- Cross-market arbitrage detection
-
----
-
-## 🎯 Target Markets & Use Cases
-
-### Primary Users
-
-**African Youth (18-35)**
-- **Mobile-first crypto natives** comfortable with digital assets
-- **Sports betting enthusiasts** seeking transparent, fair odds
-- **Economic hedging** against local currency instability
-- **Social prediction** on politics, entertainment, local events
-
-**African Diaspora (25-45)**
-- **Homeland connection** through prediction markets
-- **Remittance alternative** - send value through winning predictions
-- **Currency hedging** against home country devaluation
-- **Investment diversification** beyond traditional assets
-
-**Global DeFi Users**
-- **Yield farming** through position token strategies
-- **Arbitrage opportunities** across prediction markets
-- **Portfolio diversification** with uncorrelated assets
-- **Synthetic exposure** to African economic indicators
-
-### Use Case Examples
-
-**🏈 Sports Prediction**
-> *"Will Super Eagles qualify for 2026 World Cup?"*
-> - Stake 0.1 BTC on "YES" → Receive yesBTC tokens
-> - Trade tokens before World Cup qualifiers end
-> - Earn yield if Nigeria qualifies
-
-**💱 Economic Hedging**
-> *"Will USD/NGN exceed 2000 by December 2025?"*
-> - Nigerian expat stakes BTC on "YES" as devaluation hedge
-> - If Naira crashes, BTC winnings offset purchasing power loss
-> - Create synthetic insurance against currency risk
-
-**🌧️ Weather Forecasting**
-> *"Will Lagos receive >200mm rainfall in August 2025?"*
-> - Farmers hedge against drought risk
-> - Weather-dependent businesses create natural hedges
-> - Climate researchers monetize expertise
-
-**🗳️ Political Prediction**
-> *"Will current Nigerian president complete full term?"*
-> - Diaspora community forecasts political stability
-> - Investment decisions informed by collective wisdom
-> - Democratic participation through prediction markets
+**Price Discovery System**
+- Bayesian probability modeling
+- Initial market calibration
+- Liquidity optimization algorithms
 
 ---
 
-## 🚀 Product Roadmap
+## 📂 Project Structure
 
-### Phase 1: MVP Launch (Q4 2025)
-- ✅ Core prediction market functionality
-- ✅ Bitcoin staking and position tokens
-- ✅ Mobile-optimized interface
-- ✅ Basic market categories (Sports, Politics)
-- ✅ Hedera mainnet deployment
+The project is organized into two main components:
 
-### Phase 2: DeFi Integration (Q1 2026)
-- 🔄 Position token secondary trading
-- 🔄 Yield farming mechanisms
-- 🔄 Cross-market arbitrage tools
-- 🔄 Synthetic index creation
-- 🔄 Lending/borrowing integration
-
-### Phase 3: AI & Automation (Q2 2026)
-- 📋 Natural language market creation
-- 📋 Automated market suggestions
-- 📋 Price discovery optimization
-- 📋 Sentiment analysis integration
-- 📋 Risk assessment tools
-
-### Phase 4: Global Expansion (Q3 2026)
-- 📋 Latin America market entry
-- 📋 Multi-chain deployment
-- 📋 Institutional API access
-- 📋 Regulated jurisdiction compliance
-- 📋 Traditional finance bridges
-
----
-
-## 🛠️ Technical Implementation
-
-### Frontend Stack
-- **Framework:** Next.js 14 with App Router
-- **Language:** TypeScript with strict mode
-- **Styling:** Tailwind CSS with custom design system
-- **State Management:** React Context + Zustand
-- **Wallet Integration:** WalletConnect v2 + Hedera adapters
-- **Charts:** Recharts for market visualization
-- **Mobile:** Progressive Web App with offline capabilities
-
-### Backend Infrastructure
-- **API:** Node.js with GraphQL
-- **Database:** PostgreSQL with Redis caching
-- **Real-time:** WebSocket for live market data
-- **Oracles:** Hedera Consensus Service integration
-- **AI/ML:** Python microservices for market suggestions
-- **Monitoring:** Prometheus + Grafana stack
-
-### Blockchain Integration
-- **Network:** Hedera Mainnet (carbon-negative)
-- **Wallets:** HashPack, Blade, Kabila, MetaMask
-- **Token Standard:** HTS (Hedera Token Service)
-- **Smart Contracts:** Solidity 0.8.19+
-- **Oracle:** Chainlink + HCS hybrid approach
-
----
-
-## 💰 Tokenomics & Business Model
-
-### Revenue Streams
-1. **Market Creation Fees:** 0.1% fee for creating new markets
-2. **Trading Fees:** 0.3% on position token secondary trading  
-3. **Resolution Fees:** 0.5% on winning positions
-4. **Premium Features:** Advanced analytics, institutional APIs
-5. **Yield Farming:** Platform token distribution and staking
-
-### Position Token Mechanics
 ```
-User stakes 1 BTC on "YES" → Receives 1000 yesBTC tokens
-Market resolves "YES" → yesBTC becomes redeemable for BTC
-Market resolves "NO" → yesBTC becomes worthless
-Before resolution → yesBTC tradeable on secondary markets
+predictpesa/
+├── backend/           # Python FastAPI backend
+│   ├── predictpesa/   # Core application code
+│   ├── tests/         # Test suites
+│   └── ...
+├── frontend/          # React/TypeScript frontend
+│   ├── src/           # Source code
+│   ├── public/        # Static assets
+│   └── ...
+└── README.md          # This file
 ```
 
-### Platform Token (PESA)
-- **Governance:** Vote on market resolution disputes
-- **Fee Discounts:** Reduced trading fees for PESA holders  
-- **Yield Farming:** Earn PESA through market participation
-- **Staking Rewards:** Lock PESA for platform fee sharing
+---
+
+## 🔧 Backend
+
+The backend is built with Python using FastAPI, SQLAlchemy, and integrates with Hedera's blockchain services.
+
+### Core Models
+
+- **User**: Account management and authentication
+- **Market**: Prediction market definitions and states
+- **MarketOutcome**: Possible outcomes for markets
+- **Stake**: User positions in markets
+- **OracleData**: External data sources for market resolution
+- **OracleSource**: Verified data providers
+- **Transaction**: On-chain transaction records
+
+### Key Features
+
+- **Complete API**: RESTful endpoints for all platform functionality
+- **AI Integration**: Groq LLM integration for market analysis
+- **Blockchain Integration**: Hedera Smart Contract Service and Token Service
+- **Comprehensive Testing**: 100% test coverage of models and core infrastructure
+
+### Environment Setup
+
+The backend requires the following environment variables:
+```
+GROQ_API_KEY=your-groq-api-key
+HEDERA_ACCOUNT_ID=your-hedera-account-id
+HEDERA_PRIVATE_KEY=your-hedera-private-key
+SECRET_KEY=your-jwt-secret-key
+```
 
 ---
 
-## 🌍 Impact & Vision
+## 🎨 Frontend
 
-### Economic Impact
-- **Financial Inclusion:** Crypto-native betting for underbanked populations
-- **Remittance Innovation:** Diaspora engagement through prediction markets  
-- **Risk Management:** Hedging tools for currency and commodity exposure
-- **Knowledge Markets:** Monetizing local expertise and information
+The frontend is built with React, TypeScript, and Vite, featuring a modern UI with Tailwind CSS and Shadcn UI components.
 
-### Social Impact  
-- **Democratic Participation:** Political prediction as civic engagement
-- **Information Transparency:** Crowd-sourced truth discovery
-- **Community Building:** Shared economic interests across borders
-- **Educational Value:** Learning through skin-in-the-game forecasting
+### Key Features
 
-### Long-term Vision
-> **"Create a global, decentralized marketplace for knowledge and probability, where anyone can monetize their insights about the future while contributing to collective intelligence."**
+- **Modern React/TypeScript**: Built with the latest React 18 and TypeScript
+- **Responsive Design**: Mobile-first approach for African markets
+- **Web3 Integration**: Wallet connection for blockchain interactions
+- **Interactive Markets**: Real-time market data visualization
+- **Portfolio Management**: Track and manage prediction positions
 
-By 2027, PredictPesa aims to be:
-- The **primary prediction market** for Africa and emerging markets
-- A **DeFi primitive** integrated across major protocols
-- An **AI-powered** autonomous market creation platform
-- A **bridge** between traditional finance and decentralized prediction markets
+### Pages
+
+- **Home**: Landing page with platform introduction
+- **Markets**: Browse and filter available prediction markets
+- **Market Detail**: Individual market view with staking interface
+- **Dashboard**: User overview and analytics
+- **Portfolio**: User's active positions and history
+- **Profile**: User account management
+- **Rewards**: Platform rewards and incentives
+
+### Tech Stack
+
+- **Framework**: React with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn UI (Radix UI primitives)
+- **State Management**: React Query
+- **Routing**: React Router
+- **Charts**: Recharts
+- **Form Handling**: React Hook Form with Zod validation
 
 ---
 
-## 🤝 Contributing
+## 🚀 Getting Started
 
-### For Developers
+### Prerequisites
+
+- Node.js 18+ and npm/yarn
+- Python 3.9+
+- Git
+
+### Backend Setup
+
 ```bash
-# Clone the repository
-git clone https://github.com/predictpesa/frontend
-cd predictpesa-frontend
+# Navigate to backend directory
+cd backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -e .
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your credentials
+
+# Start development server
+python simple_server.py
+```
+
+### Frontend Setup
+
+```bash
+# Navigate to frontend directory
+cd frontend
 
 # Install dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
 ```
 
-### For Researchers
-- Submit market category proposals
-- Contribute oracle data sources
-- Provide economic modeling feedback
-- Test prediction accuracy algorithms
-
-### For Community
-- Create prediction markets for local events
-- Provide market resolution data
-- Share platform with local communities
-- Participate in governance discussions
+Visit `http://localhost:5173` to see the frontend application.
 
 ---
 
-## 📊 Market Opportunity
+## 📡 API Endpoints
 
-### Total Addressable Market
-- **Global Prediction Markets:** $300M (2024) → $1.2B (2028)
-- **African Betting Market:** $40B+ annually
-- **Crypto Adoption in Africa:** 2.3% population (highest growth globally)
-- **Mobile Money Users:** 469M across Africa
+The backend provides the following key API endpoints:
 
-### Competitive Advantages
-1. **First-mover advantage** in African prediction markets
-2. **Bitcoin-native** design aligned with regional preferences
-3. **Mobile-first** architecture for emerging market UX
-4. **DeFi composability** creating new financial primitives
-5. **AI-powered** market curation and optimization
+- **GET /**: Root endpoint with welcome message
+- **GET /health**: Health check for monitoring
+- **GET /api/v1/markets**: List available prediction markets
+- **GET /api/v1/ai/analyze**: AI-powered market analysis
+
+For detailed API documentation, run the backend server and visit `/docs`.
 
 ---
 
-## 🔒 Security & Compliance
+## 🧪 Testing
 
-### Smart Contract Security
-- **Multi-sig governance** for critical protocol updates
-- **Time-locked** upgrades with community oversight  
-- **Bug bounty program** with substantial rewards
-- **Formal verification** of core mathematical properties
-- **Regular audits** by leading blockchain security firms
+### Backend Testing
 
-### Regulatory Compliance
-- **Prediction markets** vs. gambling legal framework
-- **KYC/AML** optional for enhanced features
-- **Tax reporting** tools for user compliance
-- **Jurisdictional analysis** for global expansion
-- **Regulatory sandboxes** in supportive jurisdictions
+```bash
+# Run all tests
+python -m pytest tests/test_models.py tests/test_simple_api.py tests/test_core_config.py -v
 
-### Data Privacy
-- **Zero-knowledge** position privacy options
-- **GDPR compliance** for European users
-- **Local data residency** requirements adherence
-- **User-controlled** data portability and deletion
+# Run specific test suites
+python -m pytest tests/test_models.py -v  # Model tests
+python -m pytest tests/test_core_config.py -v  # Core config tests
+python -m pytest tests/test_simple_api.py -v  # API tests
 
----
+# Basic functionality test
+python test_basic.py
+```
 
-## 📞 Contact & Community
+### Frontend Testing
 
-### Core Team
-- **Product:** Blockchain infrastructure & tokenomics design
-- **Engineering:** Full-stack development & smart contracts  
-- **AI/ML:** Market suggestion algorithms & price discovery
-- **Business:** Partnerships, compliance & go-to-market
-- **Community:** African market development & user growth
+```bash
+# Run tests
+cd frontend
+npm test
 
-### Community Channels
-- **Discord:** Real-time community discussions
-- **Telegram:** Announcements and quick updates
-- **Twitter:** Product updates and market insights
-- **LinkedIn:** Business partnerships and professional network
-- **GitHub:** Open-source development and contributions
-
-### Partnerships
-- **Blockchain:** Hedera Hashgraph ecosystem integration
-- **DeFi:** Cross-protocol composability partnerships
-- **Data:** Oracle providers and news feed integrations
-- **Regional:** African cryptocurrency exchanges and fintechs
-- **Academic:** Research partnerships with African universities
+# Run with coverage
+npm test -- --coverage
+```
 
 ---
 
-## 📜 License
+## 📦 Deployment
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Backend Deployment
+
+The backend can be deployed using Docker:
+
+```bash
+# Build Docker image
+docker build -t predictpesa-backend ./backend
+
+# Run container
+docker run -p 8000:8000 -e PORT=8000 predictpesa-backend
+```
+
+### Frontend Deployment
+
+The frontend can be built for production:
+
+```bash
+cd frontend
+npm run build
+```
+
+The output will be in the `frontend/dist` directory, ready to be served by any static file server.
 
 ---
 
-## ⚠️ Disclaimer
+## 👥 Contributing
 
-PredictPesa is experimental software in active development. Users should:
-- **Understand risks** associated with cryptocurrency and prediction markets
-- **Never invest** more than they can afford to lose
-- **Comply with local laws** regarding cryptocurrency and betting
-- **Verify market resolution** criteria before participating
-- **Use at their own risk** while protocols are in beta
+Contributions are welcome! Please feel free to submit a Pull Request.
 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+<p align="center">
+  <b>PredictPesa</b><br>
+  <i>Stake Bitcoin. Forecast Everything. Trade Your Belief.</i><br>
+  Built with ❤️ for Africa
+</p>
