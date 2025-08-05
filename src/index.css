@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PredictPesa Design System - Dark Luxury DeFi Theme */
+
+@layer base {
+  :root {
+    /* Dark Luxury Color Palette */
+    --space-black: 220 20% 8%;
+    --gunmetal: 215 18% 12%;
+    --dark-slate: 217 19% 16%;
+    --charcoal: 218 16% 20%;
+    --ash-grey: 210 12% 32%;
+    --matte-grey: 210 8% 45%;
+    
+    /* Accent Colors */
+    --bitcoin-orange: 25 95% 55%;
+    --electric-blue: 213 95% 65%;
+    --cyber-green: 142 75% 45%;
+    --burnished-gold: 45 85% 60%;
+    --deep-emerald: 158 65% 35%;
+    
+    /* Gradients */
+    --cyber-gradient: linear-gradient(135deg, hsl(213 95% 65%) 0%, hsl(258 85% 70%) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(45 85% 60%) 0%, hsl(38 90% 65%) 100%);
+    --dark-gradient: linear-gradient(135deg, hsl(220 20% 8%) 0%, hsl(215 18% 12%) 100%);
+    --success-gradient: linear-gradient(135deg, hsl(142 75% 45%) 0%, hsl(158 65% 35%) 100%);
+    
+    /* Semantic Colors */
+    --background: var(--space-black);
+    --foreground: 210 20% 92%;
+    
+    --card: var(--gunmetal);
+    --card-foreground: 210 15% 88%;
+    
+    --popover: var(--dark-slate);
+    --popover-foreground: 210 15% 88%;
+    
+    --primary: var(--electric-blue);
+    --primary-foreground: 220 20% 8%;
+    
+    --secondary: var(--dark-slate);
+    --secondary-foreground: 210 15% 88%;
+    
+    --muted: var(--charcoal);
+    --muted-foreground: var(--matte-grey);
+    
+    --accent: var(--bitcoin-orange);
+    --accent-foreground: 220 20% 8%;
+    
+    --success: var(--cyber-green);
+    --success-foreground: 220 20% 8%;
+    
+    --warning: var(--burnished-gold);
+    --warning-foreground: 220 20% 8%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 20% 92%;
+    
+    --border: 215 18% 18%;
+    --input: var(--dark-slate);
+    --ring: var(--electric-blue);
+    
+    --radius: 0.75rem;
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--electric-blue) / 0.15);
+    --shadow-gold: 0 0 25px hsl(var(--burnished-gold) / 0.2);
+    --shadow-success: 0 0 20px hsl(var(--cyber-green) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    background: var(--dark-gradient);
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space font-semibold;
+  }
+  
+  .font-crypto {
+    @apply font-space;
+  }
+  
+  .font-mono {
+    @apply font-jetbrains;
+  }
+  
+  .text-bitcoin {
+    color: hsl(var(--bitcoin-orange));
+  }
+  
+  .text-cyber {
+    color: hsl(var(--electric-blue));
+  }
+  
+  .text-success {
+    color: hsl(var(--cyber-green));
+  }
+  
+  .text-gold {
+    color: hsl(var(--burnished-gold));
+  }
+  
+  .bg-gunmetal {
+    background-color: hsl(var(--gunmetal));
+  }
+  
+  .bg-dark-slate {
+    background-color: hsl(var(--dark-slate));
+  }
+  
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+  
+  .border-gunmetal {
+    border-color: hsl(var(--gunmetal));
+  }
+  
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .glow-success {
+    box-shadow: var(--shadow-success);
+  }
+  
+  .gradient-cyber {
+    background: var(--cyber-gradient);
+  }
+  
+  .gradient-gold {
+    background: var(--gold-gradient);
+  }
+  
+  .gradient-dark {
+    background: var(--dark-gradient);
+  }
+  
+  .gradient-success {
+    background: var(--success-gradient);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+@layer components {
+  .crypto-card {
+    @apply bg-card border border-border rounded-lg p-6 transition-smooth hover:glow;
+  }
+  
+  .crypto-button {
+    @apply font-crypto font-medium px-6 py-3 rounded-lg transition-smooth;
+  }
+  
+  .crypto-button-primary {
+    @apply crypto-button gradient-cyber text-primary-foreground hover:scale-105 hover:glow;
+  }
+  
+  .crypto-button-secondary {
+    @apply crypto-button bg-secondary text-secondary-foreground border border-border hover:bg-charcoal;
+  }
+  
+  .crypto-button-gold {
+    @apply crypto-button gradient-gold text-warning-foreground hover:scale-105 hover:glow-gold;
+  }
+  
+  .crypto-button-success {
+    @apply crypto-button gradient-success text-success-foreground hover:scale-105 hover:glow-success;
+  }
+  
+  .market-card {
+    @apply crypto-card hover:border-primary/30 cursor-pointer;
+  }
+  
+  .stats-card {
+    @apply crypto-card bg-gradient-to-br from-card to-secondary;
+  }
+  
+  .glow-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
