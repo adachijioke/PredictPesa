@@ -52,3 +52,14 @@ ENV/
 *.njsproj
 *.sln
 *.sw?
+docs/
+
+# Smart Contracts
+contracts/node_modules/
+contracts/cache/
+contracts/artifacts/
+contracts/typechain/
+contracts/typechain-types/
+contracts/coverage/
+contracts/deployments/*.json
+!contracts/deployments/.gitkeep

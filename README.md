@@ -138,6 +138,12 @@ predictpesa/
 ├── frontend/          # React/TypeScript frontend
 │   ├── src/           # Source code
 │   ├── public/        # Static assets
+│   └── vercel.json    # Vercel deployment config
+├── contracts/         # Hedera smart contracts
+│   ├── MarketFactory.sol
+│   ├── PredictionMarket.sol
+│   ├── Oracle.sol
+│   ├── AMMPool.sol
 │   └── ...
 └── README.md          # This file
 ```
@@ -315,16 +321,38 @@ docker build -t predictpesa-backend ./backend
 docker run -p 8000:8000 -e PORT=8000 predictpesa-backend
 ```
 
-### Frontend Deployment
+### Frontend Deployment (Vercel)
 
-The frontend can be built for production:
+The frontend is configured for deployment on Vercel:
 
 ```bash
 cd frontend
 npm run build
 ```
 
-The output will be in the `frontend/dist` directory, ready to be served by any static file server.
+Deploy to Vercel:
+- Push to GitHub
+- Import repository in Vercel dashboard
+- Vercel will auto-detect Vite configuration
+- Set environment variables in Vercel dashboard
+
+The `vercel.json` configuration handles:
+- SPA routing fallback
+- Asset caching optimization
+- Environment variable management
+
+### Smart Contracts Deployment
+
+Deploy contracts to Hedera testnet:
+
+```bash
+cd contracts
+npm install
+npm run compile
+npm run deploy:testnet
+```
+
+For detailed deployment instructions, see [contracts/DEPLOYMENT_GUIDE.md](contracts/DEPLOYMENT_GUIDE.md).
 
 ---
 
