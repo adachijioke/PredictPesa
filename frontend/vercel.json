@@ -18,9 +18,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "VITE_API_URL": "@vite_api_url",
-    "VITE_HEDERA_NETWORK": "@vite_hedera_network"
-  }
+  ]
 }
